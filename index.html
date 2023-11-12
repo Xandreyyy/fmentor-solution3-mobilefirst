@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form autocomplete="off">
+      <div class="input-wrapper">
+        <div>
+          <label for="day" class="bold-gray">Day</label>
+          <input type="text" id="day" placeholder="DD">
+          <span class="error_displayer error"></span>
+        </div>
+        <div>
+          <label for="month" class="bold-gray">Month</label>
+          <input type="text" id="month" placeholder="MM">
+          <span class="error_displayer error"></span>
+        </div>
+        <div>
+          <label for="year" class="bold-gray">Year</label>
+          <input type="text" id="year" placeholder="YYYY">
+          <span class="error_displayer error"></span>
+        </div>
+      </div>
+
+      <div class="bottom-wrapper">
+        <span id="crossLine"></span>
+        <button type="submit"><img src="./assets/images/icon-arrow.svg"></button>
+      </div>
+    </form>
+
+    <section class="result-section">
+      <p><span class="bold-purple">--</span> years</p>
+      <p><span class="bold-purple">--</span> months</p>
+      <p><span class="bold-purple">--</span> days</p>
+    </section>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Xandreyyy">Xandreyyy</a>.
+  </div>
+</body>
+</html>

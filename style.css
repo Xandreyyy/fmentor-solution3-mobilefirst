@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'poppinsboldi';
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+body{
+    background-color: hsl(0, 0%, 86%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: poppins, 'sans-serif';
+    min-height: 100vh;
+}
+
+.container{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px 20px 25%;
+    padding-block: 3rem;
+    padding-inline: 1.8rem;
+    width: min(90%, 50rem);
+}
+
+.bold-purple{
+    color: hsl(259, 100%, 65%);
+    font-weight: bold;
+}
+
+.bold-gray{
+    color: hsl(0, 1%, 44%);
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.error{
+    color: hsl(0, 100%, 67%);
+}
+
+.input-wrapper{
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.input-wrapper > *{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input-wrapper input{
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 8px;
+    caret-color: hsl(259, 100%, 65%);
+    font-size: 1.4rem;
+    font-weight: bold;
+    max-width: 12rem;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.input-wrapper input:focus{
+    outline: 1px solid hsl(259, 100%, 65%);
+}
+
+.error_displayer{
+    font-size: 0.8rem;
+    font-style: italic;
+    position: absolute;
+    top: 100%;
+}
+
+.bottom-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-block: 3rem;
+    position: relative;
+}
+
+.bottom-wrapper button{
+    background-color: hsl(259, 100%, 65%);
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    padding: 1.6em;
+    transition: 0.2s ease-out;
+    z-index: 2;
+}
+
+.bottom-wrapper button:hover{
+    background-color: hsl(0, 0%, 8%);
+}
+
+.bottom-wrapper button:active{
+    transform: scale(0.9);
+}
+
+.bottom-wrapper button img{
+    /*2.1 because with only 2 the "scale(0.9)" have a weird animation*/
+    width: 2.1rem;
+}
+
+#crossLine{
+    background-color: hsl(0, 0%, 94%);
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 1;
+}
+
+.result-section p{
+    font-family: poppinsboldi, 'sans-serif';
+    font-size: 3.5rem;
+    line-height: 1.2em;
+}
+
+@media screen and (min-width: 992px) {
+    .container{
+        padding-inline: 2.5rem;
+    }
+
+    .input-wrapper{
+        column-gap: 0px;
+    }
+
+    .input-wrapper input{
+        font-size: 2rem;
+        width: 85%;
+    }
+
+    .error_displayer{
+        font-size: 1rem;
+    }
+
+    .bottom-wrapper{
+        justify-content: end;
+        margin-block: 1rem;
+    }
+    
+    .result-section p{
+        font-size: 5rem;
+    }
+}
